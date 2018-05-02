@@ -1,2 +1,2 @@
 # GTree
-GTree is a 
+GTree is a software that tracks neurons
