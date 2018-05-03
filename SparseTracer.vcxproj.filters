@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Function">
+      <UniqueIdentifier>{dbadd8ae-fbb8-44ac-bebf-a921cedb2079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Function\trace">
+      <UniqueIdentifier>{20c06e75-37a3-43ff-bfd4-0c0d3728552d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Function\trace\SparseTrace">
+      <UniqueIdentifier>{3eb59da2-c315-4638-9c48-108f97d88ac9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Function\IO">
+      <UniqueIdentifier>{a89d2f89-8075-44b8-b56d-608a25d147fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ngtypes">
+      <UniqueIdentifier>{db72670a-2425-48d3-82f1-b2da8a131e85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Dock">
+      <UniqueIdentifier>{f282c190-feb3-4c78-b8f0-7b2704867b96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\ngtypes">
+      <UniqueIdentifier>{50f7d91f-9177-460c-a334-69f0231c3eac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Dock">
+      <UniqueIdentifier>{8ae4a5fc-08f8-4107-8631-27e23b22a873}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Function">
+      <UniqueIdentifier>{d93706d1-4c89-4864-965f-e27690673530}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Function\IO">
+      <UniqueIdentifier>{79e639b0-c091-42bd-bfcb-c53f3923fb86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Function\Trace">
+      <UniqueIdentifier>{a4ef820e-bf4a-4721-b9e8-1f58d91a15de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Function\Trace\SparseTrace">
+      <UniqueIdentifier>{e9bb9940-ad73-4132-9da1-2a961d78c605}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Thread\binarythread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\neuroglwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\nginteractorstyletrackballcamera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog\openimagedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sparsetracer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\binaryfilter.cpp">
+      <Filter>Source Files\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\contourutil.cpp">
+      <Filter>Source Files\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\volumealgo.cpp">
+      <Filter>Source Files\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\Trace\traceutil.cpp">
+      <Filter>Source Files\Function\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\Trace\SparseTrace\largesparsetracefilter.cpp">
+      <Filter>Source Files\Function\trace\SparseTrace</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\Trace\SparseTrace\LIBSVMClassifier.cpp">
+      <Filter>Source Files\Function\trace\SparseTrace</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\Trace\SparseTrace\sparsetraceaxonfilter.cpp">
+      <Filter>Source Files\Function\trace\SparseTrace</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\Trace\SparseTrace\sparsetracefilter.cpp">
+      <Filter>Source Files\Function\trace\SparseTrace</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\Trace\SparseTrace\SVMTraceFilter.cpp">
+      <Filter>Source Files\Function\trace\SparseTrace</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\IO\imagereader.cpp">
+      <Filter>Source Files\Function\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\IO\imagewriter.cpp">
+      <Filter>Source Files\Function\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="mostd\most_data.cpp">
+      <Filter>Source Files\Function\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="mostd\most_data16.cpp">
+      <Filter>Source Files\Function\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\IO\MOSTDReader.cpp">
+      <Filter>Source Files\Function\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\IO\somareader.cpp">
+      <Filter>Source Files\Function\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\IO\somawriter.cpp">
+      <Filter>Source Files\Function\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\IO\tracestackreader.cpp">
+      <Filter>Source Files\Function\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\IO\tracestackwriter.cpp">
+      <Filter>Source Files\Function\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\IO\treeReader.cpp">
+      <Filter>Source Files\Function\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\IO\treewriter.cpp">
+      <Filter>Source Files\Function\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="ngtypes\shape.cpp">
+      <Filter>Source Files\ngtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="ngtypes\soma.cpp">
+      <Filter>Source Files\ngtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="ngtypes\tree.cpp">
+      <Filter>Source Files\ngtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="ngtypes\volume.cpp">
+      <Filter>Source Files\ngtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="DockWidget\binarysettingsdockwidget.cpp">
+      <Filter>Source Files\Dock</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_binarysettingsdockwidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_sparsetracer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mostd\imagecache.cpp">
+      <Filter>Source Files\Function\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\Trace\tracefilter.cpp">
+      <Filter>Source Files\Function\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\Trace\bridgebreaker.cpp">
+      <Filter>Source Files\Function\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\Trace\neurotreecluster.cpp">
+      <Filter>Source Files\Function\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\Trace\NeuroGPSTreeFilter.cpp">
+      <Filter>Source Files\Function\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="ngtypes\ParamPack.cpp">
+      <Filter>Source Files\ngtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\Trace\SemiAutoTracer.cpp">
+      <Filter>Source Files\Function\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\Trace\SparseTrace\CrossBranchFilter.cpp">
+      <Filter>Source Files\Function\trace\SparseTrace</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\Trace\SparseTrace\CrossFiberFilter.cpp">
+      <Filter>Source Files\Function\trace\SparseTrace</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\NGUtility.cpp">
+      <Filter>Source Files\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\DendriteLevelImageMaker.cpp">
+      <Filter>Source Files\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeChecker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockWidget\NGTreeWidget.cpp">
+      <Filter>Source Files\Dock</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\IO\inifile.cpp">
+      <Filter>Source Files\Function\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\IO\Prestore.cpp">
+      <Filter>Source Files\Function\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\StoreThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\Trace\CorrectTrace.cpp">
+      <Filter>Source Files\Function\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\probefilter.cpp">
+      <Filter>Source Files\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\ImageScaleFiter.cpp">
+      <Filter>Source Files\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\Trace\CaliberBuilder.cpp">
+      <Filter>Source Files\Function\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_sparsetracer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_openimagedialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_neuroglwidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_binarythread.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_binarysettingsdockwidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TreeChecker.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_StoreThread.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_Prestore.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_NGTreeWidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\IO\HDF5Writer.cpp">
+      <Filter>Source Files\Function\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\IO\HDF5Reader.cpp">
+      <Filter>Source Files\Function\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog\creathdf5dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_creathdf5dialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_HDF5Writer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\Trace\SemiAutoConnect.cpp">
+      <Filter>Source Files\Function\trace</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Thread\binarythread.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Render\neuroglwidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialog\openimagedialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="sparsetracer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DockWidget\binarysettingsdockwidget.h">
+      <Filter>Header Files\Dock</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DockWidget\binarysettingsdockwidget.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialog\openimagedialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="sparsetracer.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource\background.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="binarysettingsdockwidget.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource\go-next.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource\go-previous.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource\hello.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource\minus.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource\open.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource\plus.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource\reload.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource\run.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource\save.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource\Science.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource\seed.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource\settings.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="sparsetracer.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource\step.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource\stop.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource\sweep.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource\tree.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="mostd\imagecache.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="mostd\most_data.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="mostd\most_data16.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Render\nginteractorstyletrackballcamera.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ngtypes\volumecreator.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ngtypes\basetypes.h">
+      <Filter>Header Files\ngtypes</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ngtypes\ineurondataobject.h">
+      <Filter>Header Files\ngtypes</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ngtypes\ParamPack.h">
+      <Filter>Header Files\ngtypes</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ngtypes\shape.h">
+      <Filter>Header Files\ngtypes</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ngtypes\soma.h">
+      <Filter>Header Files\ngtypes</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ngtypes\tree.h">
+      <Filter>Header Files\ngtypes</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ngtypes\volume.h">
+      <Filter>Header Files\ngtypes</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\binaryfilter.h">
+      <Filter>Header Files\Function</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\contourutil.h">
+      <Filter>Header Files\Function</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\ineuronio.h">
+      <Filter>Header Files\Function</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\ineuronprocessobject.h">
+      <Filter>Header Files\Function</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\volumealgo.h">
+      <Filter>Header Files\Function</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\IO\imagereader.h">
+      <Filter>Header Files\Function\IO</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\IO\imagewriter.h">
+      <Filter>Header Files\Function\IO</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\IO\MOSTDReader.h">
+      <Filter>Header Files\Function\IO</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\IO\somareader.h">
+      <Filter>Header Files\Function\IO</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\IO\somawriter.h">
+      <Filter>Header Files\Function\IO</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\IO\tracestackreader.h">
+      <Filter>Header Files\Function\IO</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\IO\tracestackwriter.h">
+      <Filter>Header Files\Function\IO</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\IO\treeReader.h">
+      <Filter>Header Files\Function\IO</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\IO\treewriter.h">
+      <Filter>Header Files\Function\IO</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\Trace\traceutil.h">
+      <Filter>Header Files\Function\Trace</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\Trace\SparseTrace\largesparsetracefilter.h">
+      <Filter>Header Files\Function\Trace\SparseTrace</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\Trace\SparseTrace\LIBSVMClassifier.h">
+      <Filter>Header Files\Function\Trace\SparseTrace</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\Trace\SparseTrace\sparsetraceaxonfilter.h">
+      <Filter>Header Files\Function\Trace\SparseTrace</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\Trace\SparseTrace\sparsetracefilter.h">
+      <Filter>Header Files\Function\Trace\SparseTrace</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\Trace\SparseTrace\SVMTraceFilter.h">
+      <Filter>Header Files\Function\Trace\SparseTrace</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_binarysettingsdockwidget.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_openimagedialog.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_sparsetracer.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\Trace\bridgebreaker.h">
+      <Filter>Header Files\Function\Trace</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\Trace\NeuroGPSTreeFilter.h">
+      <Filter>Header Files\Function\Trace</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\Trace\neurotreecluster.h">
+      <Filter>Header Files\Function\Trace</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\Trace\tracefilter.h">
+      <Filter>Header Files\Function\Trace</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\Trace\SparseTrace\CrossBranchFilter.h">
+      <Filter>Header Files\Function\Trace\SparseTrace</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TreeChecker.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DockWidget\NGTreeWidget.h">
+      <Filter>Header Files\Dock</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\IO\Prestore.h">
+      <Filter>Header Files\Function\IO</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Thread\StoreThread.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialog\creathdf5dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialog\creathdf5dialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\IO\HDF5Writer.h">
+      <Filter>Header Files\Function\IO</Filter>
+    </CustomBuild>
+    <CustomBuild Include="resource.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\DendriteLevelImageMaker.h">
+      <Filter>Header Files\Function</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\ImageScaleFiter.h">
+      <Filter>Header Files\Function</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\probefilter.h">
+      <Filter>Header Files\Function</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\NGUtility.h">
+      <Filter>Header Files\Function</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\IO\HDF5Reader.h">
+      <Filter>Header Files\Function\IO</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\IO\inifile.h">
+      <Filter>Header Files\Function\IO</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\Trace\CaliberBuilder.h">
+      <Filter>Header Files\Function\Trace</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\Trace\CorrectTrace.h">
+      <Filter>Header Files\Function\Trace</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\Trace\SemiAutoConnect.h">
+      <Filter>Header Files\Function\Trace</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\Trace\SemiAutoTracer.h">
+      <Filter>Header Files\Function\Trace</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Function\Trace\SparseTrace\CrossFiberFilter.h">
+      <Filter>Header Files\Function\Trace\SparseTrace</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_creathdf5dialog.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>

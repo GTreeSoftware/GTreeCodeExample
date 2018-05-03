@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SparseTracer</class>
+ <widget class="QMainWindow" name="SparseTracer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>706</width>
+    <height>584</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GTree</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="sparsetracer.qrc">
+    <normaloff>:/new/tracer/Resource/Science.png</normaloff>:/new/tracer/Resource/Science.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="mainLayout"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>706</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionOpenImage"/>
+    <addaction name="actionOpenSoma"/>
+    <addaction name="actionSaveSoma"/>
+    <addaction name="actionSaveTree"/>
+    <addaction name="actionSaveImage"/>
+    <addaction name="actionSaveCaliber"/>
+    <addaction name="actionClear"/>
+    <addaction name="actionSnapshot"/>
+   </widget>
+   <widget class="QMenu" name="menuTrace">
+    <property name="title">
+     <string>Trace</string>
+    </property>
+    <addaction name="actionNeuroGPS"/>
+    <addaction name="actionNGTree_Trace"/>
+    <addaction name="actionLocal_Run"/>
+    <addaction name="actionTreeChecker"/>
+    <addaction name="actionRun"/>
+    <addaction name="actionTrain"/>
+    <addaction name="actionStop"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="action2DView"/>
+    <addaction name="actionZoom_in"/>
+    <addaction name="actionZoom_out"/>
+    <addaction name="actionVisible"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actionCreate_HDF5"/>
+   </widget>
+   <widget class="QMenu" name="menuMode">
+    <property name="title">
+     <string>Mode</string>
+    </property>
+    <addaction name="actionNGTree"/>
+    <addaction name="actionSBWT"/>
+   </widget>
+   <widget class="QMenu" name="menuDebug">
+    <property name="title">
+     <string>Debug</string>
+    </property>
+    <widget class="QMenu" name="menuTimer_2">
+     <property name="title">
+      <string>Timer</string>
+     </property>
+     <addaction name="actionStart"/>
+     <addaction name="actionHalt"/>
+     <addaction name="actionReset"/>
+    </widget>
+    <addaction name="actionSaveSVM"/>
+    <addaction name="actionSaveBack"/>
+    <addaction name="actionSaveLayerImage"/>
+    <addaction name="actionSaveLayerSwc"/>
+    <addaction name="actionChoose_Line"/>
+    <addaction name="actionChoose_Vertex"/>
+    <addaction name="actionDelete_Line"/>
+    <addaction name="actionCut_Vertex"/>
+    <addaction name="actionDraw_Line"/>
+    <addaction name="actionPick_Soma"/>
+    <addaction name="actionDelete_Soma"/>
+    <addaction name="actionSelect_Tree"/>
+    <addaction name="actionDelete_Tree"/>
+    <addaction name="actionTest"/>
+    <addaction name="menuTimer_2"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuTrace"/>
+   <addaction name="menuMode"/>
+   <addaction name="menuDebug"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpenImage"/>
+   <addaction name="actionSaveTree"/>
+   <addaction name="actionSnapshot"/>
+   <addaction name="actionClear"/>
+   <addaction name="separator"/>
+   <addaction name="actionNGTree"/>
+   <addaction name="actionSBWT"/>
+   <addaction name="separator"/>
+   <addaction name="actionZoom_in"/>
+   <addaction name="actionZoom_out"/>
+   <addaction name="actionVisible"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="separator"/>
+   <addaction name="actionRun"/>
+   <addaction name="actionStop"/>
+   <addaction name="actionTrain"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <property name="toolTip">
+    <string>locate soma</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNGTree_Trace"/>
+   <addaction name="actionLocal_Run"/>
+   <addaction name="actionTreeChecker"/>
+   <addaction name="actionNeuroGPS"/>
+  </widget>
+  <action name="actionOpenImage">
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/open.png</normaloff>:/new/tracer/Resource/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>OpenImage</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSaveTree">
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/save.png</normaloff>:/new/tracer/Resource/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>SaveTree</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionAuto">
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/go-next.png</normaloff>:/new/tracer/Resource/go-next.png</iconset>
+   </property>
+   <property name="text">
+    <string>Auto</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/sweep.png</normaloff>:/new/tracer/Resource/sweep.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clear</string>
+   </property>
+  </action>
+  <action name="actionOpenInitSwc">
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/seed.png</normaloff>:/new/tracer/Resource/seed.png</iconset>
+   </property>
+   <property name="text">
+    <string>OpenInitSwc</string>
+   </property>
+  </action>
+  <action name="actionRun">
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/run.png</normaloff>:/new/tracer/Resource/run.png</iconset>
+   </property>
+   <property name="text">
+    <string>Run</string>
+   </property>
+   <property name="shortcut">
+    <string>T</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/stop.png</normaloff>:/new/tracer/Resource/stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionBackTrack">
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/reload.png</normaloff>:/new/tracer/Resource/reload.png</iconset>
+   </property>
+   <property name="text">
+    <string>BackTrack</string>
+   </property>
+  </action>
+  <action name="actionSaveImage">
+   <property name="text">
+    <string>SaveImage</string>
+   </property>
+  </action>
+  <action name="actionChoose_Line">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/chooseline.png</normaloff>:/new/tracer/Resource/chooseline.png</iconset>
+   </property>
+   <property name="text">
+    <string>Choose Line</string>
+   </property>
+  </action>
+  <action name="actionChoose_Vertex">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/choosepoint.png</normaloff>:/new/tracer/Resource/choosepoint.png</iconset>
+   </property>
+   <property name="text">
+    <string>Choose Vertex</string>
+   </property>
+  </action>
+  <action name="actionDelete_Line">
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/deleteline.png</normaloff>:/new/tracer/Resource/deleteline.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete Line</string>
+   </property>
+  </action>
+  <action name="actionCut_Vertex">
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/cut.png</normaloff>:/new/tracer/Resource/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cut Vertex</string>
+   </property>
+  </action>
+  <action name="actionDraw_Line">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/drawline.png</normaloff>:/new/tracer/Resource/drawline.png</iconset>
+   </property>
+   <property name="text">
+    <string>Draw Line</string>
+   </property>
+  </action>
+  <action name="action2DView">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/view.png</normaloff>:/new/tracer/Resource/view.png</iconset>
+   </property>
+   <property name="text">
+    <string>2DView</string>
+   </property>
+   <property name="shortcut">
+    <string>2</string>
+   </property>
+  </action>
+  <action name="actionZoom_in">
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/zoomin.png</normaloff>:/new/tracer/Resource/zoomin.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom in</string>
+   </property>
+  </action>
+  <action name="actionZoom_out">
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/zoomout.png</normaloff>:/new/tracer/Resource/zoomout.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom out</string>
+   </property>
+  </action>
+  <action name="actionMove">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/move.png</normaloff>:/new/tracer/Resource/move.png</iconset>
+   </property>
+   <property name="text">
+    <string>Move</string>
+   </property>
+  </action>
+  <action name="actionVisible">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/visible.png</normaloff>:/new/tracer/Resource/visible.png</iconset>
+   </property>
+   <property name="text">
+    <string>Visible</string>
+   </property>
+   <property name="shortcut">
+    <string>A</string>
+   </property>
+  </action>
+  <action name="actionSaveSVM">
+   <property name="text">
+    <string>SaveSVM</string>
+   </property>
+  </action>
+  <action name="actionSaveBack">
+   <property name="text">
+    <string>SaveBack</string>
+   </property>
+  </action>
+  <action name="actionNGTree">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>NGTree</string>
+   </property>
+  </action>
+  <action name="actionSBWT">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>SBWT</string>
+   </property>
+  </action>
+  <action name="actionPick_Soma">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/choosesoma.png</normaloff>:/new/tracer/Resource/choosesoma.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pick Soma</string>
+   </property>
+  </action>
+  <action name="actionDelete_Soma">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/deletesoma.png</normaloff>:/new/tracer/Resource/deletesoma.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete Soma</string>
+   </property>
+  </action>
+  <action name="actionSelect_Tree">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/choosetree.png</normaloff>:/new/tracer/Resource/choosetree.png</iconset>
+   </property>
+   <property name="text">
+    <string>Select Tree</string>
+   </property>
+  </action>
+  <action name="actionNGTree_Trace">
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/NGTree.png</normaloff>:/new/tracer/Resource/NGTree.png</iconset>
+   </property>
+   <property name="text">
+    <string>NGTree Trace</string>
+   </property>
+  </action>
+  <action name="actionDelete_Tree">
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/deletetree.png</normaloff>:/new/tracer/Resource/deletetree.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete Tree</string>
+   </property>
+  </action>
+  <action name="actionTest">
+   <property name="text">
+    <string>Test</string>
+   </property>
+  </action>
+  <action name="actionTrain">
+   <property name="text">
+    <string>Train</string>
+   </property>
+  </action>
+  <action name="actionTreeChecker">
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/tree.png</normaloff>:/new/tracer/Resource/tree.png</iconset>
+   </property>
+   <property name="text">
+    <string>TreeChecker</string>
+   </property>
+  </action>
+  <action name="actionLocal_Run">
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/step.png</normaloff>:/new/tracer/Resource/step.png</iconset>
+   </property>
+   <property name="text">
+    <string>Local Run</string>
+   </property>
+  </action>
+  <action name="actionSaveLayerImage">
+   <property name="text">
+    <string>SaveLayerImage</string>
+   </property>
+  </action>
+  <action name="actionSaveLayerSwc">
+   <property name="text">
+    <string>SaveLayerSwc</string>
+   </property>
+  </action>
+  <action name="actionStart">
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </action>
+  <action name="actionHalt">
+   <property name="text">
+    <string>Halt</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </action>
+  <action name="actionNeuroGPS">
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/seed.png</normaloff>:/new/tracer/Resource/seed.png</iconset>
+   </property>
+   <property name="text">
+    <string>NeuroGPS</string>
+   </property>
+  </action>
+  <action name="actionSaveSoma">
+   <property name="text">
+    <string>SaveSoma</string>
+   </property>
+  </action>
+  <action name="actionOpenSoma">
+   <property name="text">
+    <string>OpenSoma</string>
+   </property>
+  </action>
+  <action name="actionSnapshot">
+   <property name="icon">
+    <iconset resource="sparsetracer.qrc">
+     <normaloff>:/new/tracer/Resource/snap.png</normaloff>:/new/tracer/Resource/snap.png</iconset>
+   </property>
+   <property name="text">
+    <string>Snapshot</string>
+   </property>
+  </action>
+  <action name="actionCreate_HDF5">
+   <property name="text">
+    <string>Create HDF5</string>
+   </property>
+  </action>
+  <action name="actionSaveCaliber">
+   <property name="text">
+    <string>SaveCaliber</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="sparsetracer.qrc"/>
+ </resources>
+ <connections/>
+</ui>

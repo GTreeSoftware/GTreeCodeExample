@@ -1,0 +1,40 @@
+<RCC>
+    <qresource prefix="/new/tracer">
+        <file>Resource/background.png</file>
+        <file>Resource/go-next.png</file>
+        <file>Resource/go-previous.png</file>
+        <file>Resource/open.png</file>
+        <file>Resource/save.png</file>
+        <file>Resource/Science.png</file>
+        <file>Resource/seed.png</file>
+        <file>Resource/settings.png</file>
+        <file>Resource/tree.png</file>
+        <file>Resource/sweep.png</file>
+        <file>Resource/run.png</file>
+        <file>Resource/step.png</file>
+        <file>Resource/stop.png</file>
+        <file>Resource/reload.png</file>
+        <file>Resource/minus.png</file>
+        <file>Resource/plus.png</file>
+        <file>Resource/chooseline.png</file>
+        <file>Resource/choosepoint.png</file>
+        <file>Resource/cut.png</file>
+        <file>Resource/deleteline.png</file>
+        <file>Resource/drawline.png</file>
+        <file>Resource/move.png</file>
+        <file>Resource/zoomin.png</file>
+        <file>Resource/zoomout.png</file>
+        <file>Resource/view.png</file>
+        <file>Resource/visible.png</file>
+        <file>Resource/choosesoma.png</file>
+        <file>Resource/deletesoma.png</file>
+        <file>Resource/NGTree.png</file>
+        <file>Resource/choosetree.png</file>
+        <file>Resource/deletetree.png</file>
+        <file>Resource/box.png</file>
+        <file>Resource/chooseconnectline.png</file>
+        <file>Resource/connectline.png</file>
+        <file>Resource/snap.png</file>
+        <file>Resource/Splash.png</file>
+    </qresource>
+</RCC>

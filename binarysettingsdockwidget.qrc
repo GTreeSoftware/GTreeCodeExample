@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/new/tracer">
+        <file>Resource/minus.png</file>
+        <file>Resource/plus.png</file>
+    </qresource>
+</RCC>
