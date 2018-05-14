@@ -1,7 +1,7 @@
 # GNU GENERAL PUBLIC LICENSE
 Version 2, June 1991
 
-Copyright (C) Copyright (C) 2018  Britton Chance Center for Biomedical Photonics, Wuhan National Laboratory for Optoelectronic, Huazhong University of Science and Technology, Wuhan, Hubei 430074, China.
+Copyright (C) 2018  Britton Chance Center for Biomedical Photonics, Wuhan National Laboratory for Optoelectronic, Huazhong University of Science and Technology, Wuhan, Hubei 430074, China.
 
 Everyone is permitted to copy and distribute verbatim copies
 of this license document, but changing it is not allowed.
