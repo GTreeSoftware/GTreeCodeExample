@@ -1,0 +1,1 @@
+Here, we have to divide our software package into three parts to fit the upload range of Github. One has to decompress three files in this folder, named "GTree-Smooth.zip.001, GTree-Smooth.zip.002 and GTree-Smooth.zip.003",respectively. The user guide is uploaded as well. Please see section 3.6.4a and 4.3.3c in the user guide for details of smoothing the neurites.
