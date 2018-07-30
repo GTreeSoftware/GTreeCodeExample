@@ -251,19 +251,6 @@ void BinarySettingsDockWidget::UpdateParam()
     paramPack->enableSVM_ = ui->enableSVMBox->isChecked();
     paramPack->strongSignalMode_ = ui->strongSignalCheckBox->isChecked();
 	paramPack->smooth_level = (double)(ui->SmoothSlider->value())/100;//2018 03 29
-	
-	QString arg1 = ui->KernelCombox->currentText();
-	if (arg1 == "large"){
-		paramPack->kernel_size = 6;
-	}
-	else if (arg1 == "small")
-	{
-		paramPack->kernel_size = 2;
-	}
-	else
-	{
-		paramPack->kernel_size = 4;
-	}
 }
 
 void BinarySettingsDockWidget::UpdateGUI()
@@ -294,17 +281,6 @@ void BinarySettingsDockWidget::UpdateGUI()
     ui->origLowOpacSpinBox->setValue(paramPack->lowAdjustOpac_);
     ui->origHighOpacSpinBox->setValue(paramPack->highAdjustOpac_);
 	ui->SmoothSlider->setValue(100 * paramPack->smooth_level);
-	if (paramPack->kernel_size > 1.5){
-		ui->KernelCombox->setCurrentIndex(4);
-	}
-	else if (paramPack->kernel_size<0.7)
-	{
-		ui->KernelCombox->setCurrentIndex(6);
-	}
-	else
-	{
-		ui->KernelCombox->setCurrentIndex(2);
-	}
 
     UpdateTreeWidget();
 }
@@ -496,20 +472,6 @@ void BinarySettingsDockWidget::on_SmoothSlider_valueChanged(int arg1){
 	paramPack->smooth_level = arg1*0.01;
 }
 
-void BinarySettingsDockWidget::on_KernelCombox_currentTextChanged(const QString &arg1)
-{
-	if (arg1 == "large"){
-		paramPack->kernel_size = 6;
-	}
-	else if (arg1 == "small")
-	{
-		paramPack->kernel_size = 2;
-	}
-	else
-	{
-		paramPack->kernel_size = 4;
-	}
-}
 
 void BinarySettingsDockWidget::UpdateTreeWidget_Slot()
 {
@@ -534,6 +496,16 @@ void BinarySettingsDockWidget::on_enableSVMBox_toggled(bool arg)
     else{
         paramPack->enableSVM_ = false;
     }
+}
+
+void BinarySettingsDockWidget::on_GPSSVMcheckBox_toggled(bool arg)
+{
+	if (arg){
+		paramPack->enableGPSSVM_ = true;
+	}
+	else{
+		paramPack->enableGPSSVM_ = false;
+	}
 }
 
 void BinarySettingsDockWidget::on_strongSignalCheckBox_toggled(bool arg)

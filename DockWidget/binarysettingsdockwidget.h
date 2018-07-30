@@ -149,13 +149,12 @@ private slots:
     //void on_SmoothCombox_currentTextChanged(const QString &arg1);
 	void on_SmoothSlider_valueChanged(int arg1);//2018 03 29
 
-    void on_KernelCombox_currentTextChanged(const QString &arg1);
-
     void UpdateTreeWidget_Slot();
     void UpdateCheckWidget_Slot();
     void ToggleShowTraverseFlag_Slot();
 
     void on_enableSVMBox_toggled(bool);
+	void on_GPSSVMcheckBox_toggled(bool);
     void on_strongSignalCheckBox_toggled(bool);
 
     void on_xScaleSpinBox_valueChanged(int);
