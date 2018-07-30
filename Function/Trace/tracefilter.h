@@ -64,7 +64,7 @@ protected:
        std::vector<VectorVec5d> &rawDendList, //std::vector<mat2d > &dd2,
        VectorMat2i& rawDendConInfo);
 
-    void SelectSeedForTrace(const Volume<NGCHAR> &binImg, const Volume<unsigned short> &origImg, const Volume<int> &indexImg, VectorVec3d &traceSeed);
+    void SelectSeedForTrace(const Volume<NGCHAR> &binImg, const Volume<unsigned short> &origImg, const Volume<int> &indexImg, VectorVec3d &traceSeed,NGParamPack &paramm);
 
     void CalcNeighborSignal(
             const Volume<unsigned short> &origImg,//XXv

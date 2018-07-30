@@ -206,8 +206,15 @@ ProcStatPointer CorrectTrace::Update(){
 	if (mysrc->IsEmpty())return false;
 	src.QuickCopy(*mysrc);
 	CellVec3d caliberPointSet;
+	std::vector<Line3d> Curves;
+	for (int i = 0; i < myCellCurves.size(); ++i){
+		Curves.push_back(myCellCurves[i]);
+	}
 	NGCaliberBuilder cb = CaliberBuilder::New();
-	cb->NeuritesShapeReconModifyTotal(myCellCurves, myConnectSet, src, caliberPointSet);
+	cb->SetLinePoints(Curves);
+	cb->SetParam(paramPack);
+	cb->Update();
+	caliberPointSet = *(cb->GetCaliberPointSet());
 	size_t nx = src.x();
 	size_t ny = src.y();
 	size_t nz = src.z();
