@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_BinarySettingsDockWidget_t {
     QByteArrayData data[80];
-    char stringdata0[2142];
+    char stringdata0[2133];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -91,24 +91,24 @@ QT_MOC_LITERAL(58, 1504, 24), // "ToggleShowDiffArrow_Slot"
 QT_MOC_LITERAL(59, 1529, 18), // "ResetTraverse_Slot"
 QT_MOC_LITERAL(60, 1548, 28), // "on_SmoothSlider_valueChanged"
 QT_MOC_LITERAL(61, 1577, 4), // "arg1"
-QT_MOC_LITERAL(62, 1582, 34), // "on_KernelCombox_currentTextCh..."
-QT_MOC_LITERAL(63, 1617, 21), // "UpdateTreeWidget_Slot"
-QT_MOC_LITERAL(64, 1639, 22), // "UpdateCheckWidget_Slot"
-QT_MOC_LITERAL(65, 1662, 27), // "ToggleShowTraverseFlag_Slot"
-QT_MOC_LITERAL(66, 1690, 23), // "on_enableSVMBox_toggled"
-QT_MOC_LITERAL(67, 1714, 31), // "on_strongSignalCheckBox_toggled"
-QT_MOC_LITERAL(68, 1746, 29), // "on_xScaleSpinBox_valueChanged"
-QT_MOC_LITERAL(69, 1776, 29), // "on_yScaleSpinBox_valueChanged"
-QT_MOC_LITERAL(70, 1806, 29), // "on_zScaleSpinBox_valueChanged"
-QT_MOC_LITERAL(71, 1836, 34), // "on_origLowOpacSpinBox_valueCh..."
-QT_MOC_LITERAL(72, 1871, 35), // "on_origHighOpacSpinBox_valueC..."
-QT_MOC_LITERAL(73, 1907, 34), // "on_destLowOpacSpinBox_valueCh..."
-QT_MOC_LITERAL(74, 1942, 35), // "on_destHighOpacSpinBox_valueC..."
-QT_MOC_LITERAL(75, 1978, 30), // "on_imageOpacInfoButton_clicked"
-QT_MOC_LITERAL(76, 2009, 26), // "on_opacApplyButton_clicked"
-QT_MOC_LITERAL(77, 2036, 39), // "on_previewIlluminationMapButt..."
-QT_MOC_LITERAL(78, 2076, 30), // "on_previewBinaryButton_clicked"
-QT_MOC_LITERAL(79, 2107, 34) // "on_previewAxonBinaryButton_cl..."
+QT_MOC_LITERAL(62, 1582, 21), // "UpdateTreeWidget_Slot"
+QT_MOC_LITERAL(63, 1604, 22), // "UpdateCheckWidget_Slot"
+QT_MOC_LITERAL(64, 1627, 27), // "ToggleShowTraverseFlag_Slot"
+QT_MOC_LITERAL(65, 1655, 23), // "on_enableSVMBox_toggled"
+QT_MOC_LITERAL(66, 1679, 25), // "on_GPSSVMcheckBox_toggled"
+QT_MOC_LITERAL(67, 1705, 31), // "on_strongSignalCheckBox_toggled"
+QT_MOC_LITERAL(68, 1737, 29), // "on_xScaleSpinBox_valueChanged"
+QT_MOC_LITERAL(69, 1767, 29), // "on_yScaleSpinBox_valueChanged"
+QT_MOC_LITERAL(70, 1797, 29), // "on_zScaleSpinBox_valueChanged"
+QT_MOC_LITERAL(71, 1827, 34), // "on_origLowOpacSpinBox_valueCh..."
+QT_MOC_LITERAL(72, 1862, 35), // "on_origHighOpacSpinBox_valueC..."
+QT_MOC_LITERAL(73, 1898, 34), // "on_destLowOpacSpinBox_valueCh..."
+QT_MOC_LITERAL(74, 1933, 35), // "on_destHighOpacSpinBox_valueC..."
+QT_MOC_LITERAL(75, 1969, 30), // "on_imageOpacInfoButton_clicked"
+QT_MOC_LITERAL(76, 2000, 26), // "on_opacApplyButton_clicked"
+QT_MOC_LITERAL(77, 2027, 39), // "on_previewIlluminationMapButt..."
+QT_MOC_LITERAL(78, 2067, 30), // "on_previewBinaryButton_clicked"
+QT_MOC_LITERAL(79, 2098, 34) // "on_previewAxonBinaryButton_cl..."
 
     },
     "BinarySettingsDockWidget\0ApplyReadImage_Signal\0"
@@ -153,10 +153,10 @@ QT_MOC_LITERAL(79, 2107, 34) // "on_previewAxonBinaryButton_cl..."
     "BackTraverse_Slot\0NextTraverse_Slot\0"
     "ToggleShowDiffArrow_Slot\0ResetTraverse_Slot\0"
     "on_SmoothSlider_valueChanged\0arg1\0"
-    "on_KernelCombox_currentTextChanged\0"
     "UpdateTreeWidget_Slot\0UpdateCheckWidget_Slot\0"
     "ToggleShowTraverseFlag_Slot\0"
     "on_enableSVMBox_toggled\0"
+    "on_GPSSVMcheckBox_toggled\0"
     "on_strongSignalCheckBox_toggled\0"
     "on_xScaleSpinBox_valueChanged\0"
     "on_yScaleSpinBox_valueChanged\0"
@@ -248,10 +248,10 @@ static const uint qt_meta_data_BinarySettingsDockWidget[] = {
       58,    1,  519,    2, 0x08 /* Private */,
       59,    0,  522,    2, 0x08 /* Private */,
       60,    1,  523,    2, 0x08 /* Private */,
-      62,    1,  526,    2, 0x08 /* Private */,
-      63,    0,  529,    2, 0x08 /* Private */,
-      64,    0,  530,    2, 0x08 /* Private */,
-      65,    0,  531,    2, 0x08 /* Private */,
+      62,    0,  526,    2, 0x08 /* Private */,
+      63,    0,  527,    2, 0x08 /* Private */,
+      64,    0,  528,    2, 0x08 /* Private */,
+      65,    1,  529,    2, 0x08 /* Private */,
       66,    1,  532,    2, 0x08 /* Private */,
       67,    1,  535,    2, 0x08 /* Private */,
       68,    1,  538,    2, 0x08 /* Private */,
@@ -329,10 +329,10 @@ static const uint qt_meta_data_BinarySettingsDockWidget[] = {
     QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int,   61,
-    QMetaType::Void, QMetaType::QString,   61,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void, QMetaType::Int,    2,
@@ -416,11 +416,11 @@ void BinarySettingsDockWidget::qt_static_metacall(QObject *_o, QMetaObject::Call
         case 56: _t->ToggleShowDiffArrow_Slot((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 57: _t->ResetTraverse_Slot(); break;
         case 58: _t->on_SmoothSlider_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 59: _t->on_KernelCombox_currentTextChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 60: _t->UpdateTreeWidget_Slot(); break;
-        case 61: _t->UpdateCheckWidget_Slot(); break;
-        case 62: _t->ToggleShowTraverseFlag_Slot(); break;
-        case 63: _t->on_enableSVMBox_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 59: _t->UpdateTreeWidget_Slot(); break;
+        case 60: _t->UpdateCheckWidget_Slot(); break;
+        case 61: _t->ToggleShowTraverseFlag_Slot(); break;
+        case 62: _t->on_enableSVMBox_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 63: _t->on_GPSSVMcheckBox_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 64: _t->on_strongSignalCheckBox_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 65: _t->on_xScaleSpinBox_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 66: _t->on_yScaleSpinBox_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
