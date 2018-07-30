@@ -286,18 +286,25 @@ void TraceFilter::TraceCurvesAndConInfo(Volume<int> &resultIndexImg, const Volum
     printf("\n");
 
     //2016-3-22
-    //Volume<unsigned char> traceLabelMatrix_; traceLabelMatrix_.SetSize(resultIndexImg.x(), resultIndexImg.y(), resultIndexImg.z());//useless
-    //NGSVMTraceFilter svmFilter = SVMTraceFilter::New(resultIndexImg, traceLabelMatrix_);
-    //svmFilter->SetInput(m_Input);
-    //svmFilter->SetInputBack(m_Back);
-    //svmFilter->SetInputBin(m_Bin);
-    //svmFilter->SetInputRawCurves(tmpDendCurves);
-    //svmFilter->SetInputRawConInfo(tmpDendConInfo);
-    //svmFilter->SetSeed(traceSeed);
-    //svmFilter->SetParam(paramPack);
-    //svmFilter->GPSTreeUpdate();
-    //svmFilter->SwapRawConInfo(tmpDendConInfo);
-    //svmFilter->SwapRawCurves(tmpDendCurves);
+	if (paramPack->enableGPSSVM_)
+	{
+		Volume<unsigned char> traceLabelMatrix_; traceLabelMatrix_.SetSize(resultIndexImg.x(), resultIndexImg.y(), resultIndexImg.z());//useless
+		NGSVMTraceFilter svmFilter = SVMTraceFilter::New(resultIndexImg, traceLabelMatrix_);
+		svmFilter->SetInput(m_Input);
+		svmFilter->SetInputBack(m_Back);
+		svmFilter->SetInputBin(m_Bin);
+		//int i = 2;
+		//while (i--)
+		{
+			svmFilter->SetInputRawCurves(tmpDendCurves);
+			svmFilter->SetInputRawConInfo(tmpDendConInfo);
+			svmFilter->SetSeed(traceSeed);
+			svmFilter->SetParam(paramPack);
+			svmFilter->GPSTreeUpdate();
+			svmFilter->SwapRawConInfo(tmpDendConInfo);
+			svmFilter->SwapRawCurves(tmpDendCurves);
+		}
+	}
 
     ClearShortCurvesAndInvalidConnection(tmpDendCurves, tmpDendConInfo, resultDendCurves, resultDendConInfo/*, mmc12*/);
     rawDendList.clear();
