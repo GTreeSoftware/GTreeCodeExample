@@ -2479,7 +2479,7 @@ ProcStatPointer SVMTraceFilter::GPSTreeUpdate()
         }
     }
     VectorVec3d newSeed;
-    SelectSeedForTrace(*binImgPointer, *origImgPointer, indexImg_, newSeed);
+    SelectSeedForTrace(*binImgPointer, *origImgPointer, indexImg_, newSeed,paramPack);
     VectorVec5d seedEndNodes;
     VectorVec3d seedEndNodesDirection;
     int id = int(rawDendList_.size());

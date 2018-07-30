@@ -974,7 +974,9 @@ void SparseTracer::on_actionNGTree_Trace_triggered()
 	//check whether all soma are in image range.
 	{
 		NG_CREATE_DYNAMIC_CAST(Soma, tmpSoma, paramPack->SomaList);
-		if (!tmpSoma) paramPack->SomaList = std::make_shared<Soma>(); {
+		if (!tmpSoma) paramPack->SomaList = std::make_shared<Soma>();
+		NG_DYNAMIC_CAST(Soma, tmpSoma, paramPack->SomaList);
+		{
 			for (size_t i = 0; i < tmpSoma->size(); ++i) {
 				auto &cell = tmpSoma->GetCell(i);
 				if (cell.x < paramPack->xMin_ || cell.x > paramPack->xMax_ ||
@@ -985,15 +987,6 @@ void SparseTracer::on_actionNGTree_Trace_triggered()
 				}
 			}
 		}
-		//FILE* fp = fopen("F:/quan/TDatcrop.swc", "r");
-		//char line[256];
-		//double x, y, z, r; int id, type, pid;
-		//while (0 != fgets(line, 256, fp)){
-		//    sscanf_s(line, "%d %d %lf %lf %lf %lf %d", &id, &type, &x, &y, &z, &r, &pid);
-		//    //tmpSoma->push_back(Soma::MakeCell(x / paramPack->xRes_, y / paramPack->yRes_, z));
-		//    tmpSoma->push_back(Soma::MakeCell(x , y , z));
-		//}
-		//fclose(fp);
 	}
 	//
 	ui->statusBar->showMessage("NeuroGPS-Tree tracing.");

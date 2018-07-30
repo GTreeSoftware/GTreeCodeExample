@@ -1020,22 +1020,9 @@
           </widget>
           <widget class="QWidget" name="tab_2">
            <attribute name="title">
-            <string>Dendrite</string>
+            <string>NeuroGPS</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_21">
-            <item row="1" column="1">
-             <spacer name="horizontalSpacer_5">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>186</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
             <item row="3" column="0">
              <spacer name="verticalSpacer">
               <property name="orientation">
@@ -1049,9 +1036,75 @@
               </property>
              </spacer>
             </item>
+            <item row="1" column="1">
+             <spacer name="horizontalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>186</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="2" column="0" colspan="2">
+             <widget class="QLabel" name="histogramLabel">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>140</width>
+                <height>255</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>140</width>
+                <height>255</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
             <item row="1" column="0">
              <widget class="QWidget" name="widget_15" native="true">
               <layout class="QGridLayout" name="gridLayout_19">
+               <item row="2" column="0">
+                <widget class="QCheckBox" name="GPSSVMcheckBox">
+                 <property name="text">
+                  <string>GPS-SVM</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QPushButton" name="pushButton_8">
+                 <property name="text">
+                  <string>Trace Option</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../sparsetracer.qrc">
+                   <normaloff>:/new/tracer/Resource/plus.png</normaloff>
+                   <normalon>:/new/tracer/Resource/minus.png</normalon>:/new/tracer/Resource/plus.png</iconset>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                 <property name="flat">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
                <item row="1" column="0" colspan="2">
                 <widget class="QWidget" name="widget_16" native="true">
                  <layout class="QGridLayout" name="gridLayout_20">
@@ -1136,24 +1189,10 @@
                  </layout>
                 </widget>
                </item>
-               <item row="0" column="0">
-                <widget class="QPushButton" name="pushButton_8">
+               <item row="3" column="0">
+                <widget class="QCheckBox" name="BigSomacheckBox">
                  <property name="text">
-                  <string>Trace Option</string>
-                 </property>
-                 <property name="icon">
-                  <iconset resource="../sparsetracer.qrc">
-                   <normaloff>:/new/tracer/Resource/plus.png</normaloff>
-                   <normalon>:/new/tracer/Resource/minus.png</normalon>:/new/tracer/Resource/plus.png</iconset>
-                 </property>
-                 <property name="checkable">
-                  <bool>true</bool>
-                 </property>
-                 <property name="checked">
-                  <bool>true</bool>
-                 </property>
-                 <property name="flat">
-                  <bool>true</bool>
+                  <string>Big Soma</string>
                  </property>
                 </widget>
                </item>
@@ -1265,31 +1304,6 @@
               </layout>
              </widget>
             </item>
-            <item row="2" column="0" colspan="2">
-             <widget class="QLabel" name="histogramLabel">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>140</width>
-                <height>255</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>140</width>
-                <height>255</height>
-               </size>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
            </layout>
           </widget>
           <widget class="QWidget" name="tab_3">
@@ -1310,7 +1324,7 @@
               </property>
              </spacer>
             </item>
-            <item row="3" column="0">
+            <item row="4" column="0">
              <spacer name="verticalSpacer_2">
               <property name="orientation">
                <enum>Qt::Vertical</enum>
@@ -1727,46 +1741,6 @@
                <item row="1" column="0" colspan="2">
                 <widget class="QWidget" name="widget_13" native="true">
                  <layout class="QGridLayout" name="gridLayout_8">
-                  <item row="0" column="0">
-                   <widget class="QLabel" name="lowMapLabel_3">
-                    <property name="text">
-                     <string>Smooth Level</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QLabel" name="lowMapLabel_4">
-                    <property name="text">
-                     <string>Kernel Size</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="1">
-                   <widget class="QComboBox" name="KernelCombox">
-                    <item>
-                     <property name="text">
-                      <string>normal</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>large</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>small</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                  <item row="2" column="1">
-                   <widget class="QCheckBox" name="autoSmoothCheckBox">
-                    <property name="text">
-                     <string>Auto Smooth</string>
-                    </property>
-                   </widget>
-                  </item>
                   <item row="0" column="1">
                    <widget class="QSlider" name="SmoothSlider">
                     <property name="orientation">
@@ -1774,7 +1748,67 @@
                     </property>
                    </widget>
                   </item>
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="lowMapLabel_3">
+                    <property name="text">
+                     <string>Smooth Level</string>
+                    </property>
+                   </widget>
+                  </item>
                  </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QWidget" name="widget_19" native="true">
+              <layout class="QGridLayout" name="gridLayout_25">
+               <item row="0" column="0">
+                <widget class="QPushButton" name="pushButton_12">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>Reconstruction</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../sparsetracer.qrc">
+                   <normaloff>:/new/tracer/Resource/plus.png</normaloff>
+                   <normalon>:/new/tracer/Resource/minus.png</normalon>:/new/tracer/Resource/plus.png</iconset>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                 <property name="flat">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <spacer name="horizontalSpacer_11">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>94</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="1" column="0" colspan="2">
+                <widget class="QCheckBox" name="CrudeShapecheckBox">
+                 <property name="text">
+                  <string>Crude fiber shape reconstruction</string>
+                 </property>
                 </widget>
                </item>
               </layout>
@@ -1823,7 +1857,6 @@
   <tabstop>maxBoundNumSpinBox</tabstop>
   <tabstop>enableSVMBox</tabstop>
   <tabstop>strongSignalCheckBox</tabstop>
-  <tabstop>KernelCombox</tabstop>
   <tabstop>pushButton_3</tabstop>
   <tabstop>pushButton_7</tabstop>
   <tabstop>pushButton_4</tabstop>
@@ -1836,6 +1869,7 @@
  </tabstops>
  <resources>
   <include location="../sparsetracer.qrc"/>
+  <include location="F:/chenyijun/GTree_tools/sparsetracer.qrc"/>
  </resources>
  <connections>
   <connection>

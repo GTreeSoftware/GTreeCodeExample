@@ -168,7 +168,7 @@ void TraceFilter::TraceCurvesAndConInfo(Volume<int> &resultIndexImg, const Volum
     ReconstructSomaShapeForTrace(somaList,origImg, resultIndexImg,allRayLen);
     //all seed not inside soma
     VectorVec3d tmpTraceSeed;
-    SelectSeedForTrace(binImg, origImg, resultIndexImg, tmpTraceSeed);
+    SelectSeedForTrace(binImg, origImg, resultIndexImg, tmpTraceSeed,paramPack);
     //WriteVectorVec3d("X:/TDI11302011_mostd/hehe.swc","dot", tmpTraceSeed);
     //system("pause");
     //printf("SelectSeedForTrace.\n");
@@ -286,18 +286,25 @@ void TraceFilter::TraceCurvesAndConInfo(Volume<int> &resultIndexImg, const Volum
     printf("\n");
 
     //2016-3-22
-    //Volume<unsigned char> traceLabelMatrix_; traceLabelMatrix_.SetSize(resultIndexImg.x(), resultIndexImg.y(), resultIndexImg.z());//useless
-    //NGSVMTraceFilter svmFilter = SVMTraceFilter::New(resultIndexImg, traceLabelMatrix_);
-    //svmFilter->SetInput(m_Input);
-    //svmFilter->SetInputBack(m_Back);
-    //svmFilter->SetInputBin(m_Bin);
-    //svmFilter->SetInputRawCurves(tmpDendCurves);
-    //svmFilter->SetInputRawConInfo(tmpDendConInfo);
-    //svmFilter->SetSeed(traceSeed);
-    //svmFilter->SetParam(paramPack);
-    //svmFilter->GPSTreeUpdate();
-    //svmFilter->SwapRawConInfo(tmpDendConInfo);
-    //svmFilter->SwapRawCurves(tmpDendCurves);
+	if (paramPack->enableGPSSVM_)
+	{
+		Volume<unsigned char> traceLabelMatrix_; traceLabelMatrix_.SetSize(resultIndexImg.x(), resultIndexImg.y(), resultIndexImg.z());//useless
+		NGSVMTraceFilter svmFilter = SVMTraceFilter::New(resultIndexImg, traceLabelMatrix_);
+		svmFilter->SetInput(m_Input);
+		svmFilter->SetInputBack(m_Back);
+		svmFilter->SetInputBin(m_Bin);
+		//int i = 2;
+		//while (i--)
+		{
+			svmFilter->SetInputRawCurves(tmpDendCurves);
+			svmFilter->SetInputRawConInfo(tmpDendConInfo);
+			svmFilter->SetSeed(traceSeed);
+			svmFilter->SetParam(paramPack);
+			svmFilter->GPSTreeUpdate();
+			svmFilter->SwapRawConInfo(tmpDendConInfo);
+			svmFilter->SwapRawCurves(tmpDendCurves);
+		}
+	}
 
     ClearShortCurvesAndInvalidConnection(tmpDendCurves, tmpDendConInfo, resultDendCurves, resultDendConInfo/*, mmc12*/);
     rawDendList.clear();
@@ -355,7 +362,7 @@ void TraceFilter::TraceCurvesAndConInfo(Volume<int> &resultIndexImg, const Volum
 
 void TraceFilter::SelectSeedForTrace(const Volume<NGCHAR> &binImg, const Volume<unsigned short> &origImg,
                                      const Volume<int>& indexImg,
-                                     VectorVec3d &traceSeed)
+                                     VectorVec3d &traceSeed, NGParamPack &paramm)
 {
     traceSeed.clear();
 
@@ -381,7 +388,7 @@ void TraceFilter::SelectSeedForTrace(const Volume<NGCHAR> &binImg, const Volume<
         {
             for (int ij = 0; ij < nzz; ++ij)
             {
-                if (binImg(i, j, ij) > 0 && indexImg(i, j, ij) >= 0 && origImgCopy(i,j,ij) > paramPack->lowOpac_ //2017-11-18
+				if (binImg(i, j, ij) > 0 && indexImg(i, j, ij) >= 0 && origImgCopy(i, j, ij) > paramm->lowOpac_ //2017-11-18
                     && IsAreaMaxValue<unsigned short>(origImgCopy, std::max<int>(i - range, 0), std::min<int>(i + range, nxx - 1),
                     std::max<int>(j - range, 0), std::min<int>(j + range, nyy - 1),
                     std::max<int>(ij - range, 0), std::min<int>(ij + range, nzz - 1),
@@ -1937,6 +1944,13 @@ void TraceFilter::ReconstructShapeForTrace(const Vec3d &intialPoint, const Volum
     ExtractLocalDomain(intialPoint, origImg, locOrigImg, locPoint);//ÎªÁËL_XX3
 
     double slice = 0.5;//(double)(minLen) / 82.0;
+	if (paramPack->isBigSoma){
+		slice = 1;//(double)(minLen) / 82.0;  //0.5
+	}
+	else
+	{
+		slice = 0.5;
+	}
     const int blocksum = 41;//41;
 
     std::vector<double> raySlice;
@@ -2067,7 +2081,7 @@ void TraceFilter::ReconstructShapeForTrace(const Vec3d &intialPoint, const Volum
     for (int i = 2; i <= Theta + 1;++i){
         for (int j = 2; j <= Phi  +1; ++j){
             if (resultRayLength(i-1, j - 1)  > 0.0){
-                for (double k = 1.0; k <= 0.5 * resultRayLength(i - 1, j - 1); ++k){//warning!!
+                for (double k = 1.0; k <= slice * resultRayLength(i - 1, j - 1); ++k){//warning!!
                     xx = (k * std::sin(b * (double)(j-1) * PI_180) * std::cos(a * (double)(i-1) * PI_180) + locPoint(0));
                     yy = (k * std::sin(b * (double)(j-1) * PI_180) * std::sin(a * (double)(i-1) * PI_180) + locPoint(1));
                     zz = (k * std::cos(b * (double)(j-1) * PI_180) + locPoint(2));
@@ -4492,6 +4506,13 @@ void TraceFilter::ReconstructSomaShapeQuanRevi(const Vec3d &initialPoint, MatXd&
     ExtractLocalDomainV2(initialPoint, origImg, locOrigImg, locPoint);//2015-6-18
     ExtractLocalDomainV2(initialPoint, backImg, locBackImg, locPoint);//2015-6-18
     double slice = 0.5;
+	if (paramPack->isBigSoma){
+		slice = 1;//(double)(minLen) / 82.0;  //0.5
+	}
+	else
+	{
+		slice = 0.5;
+	}
     const int blocksum = 51;//2015-6-18
 
     std::vector<double> raySlice;
@@ -4649,11 +4670,11 @@ void TraceFilter::ReconstructSomaShapeQuanRevi(const Vec3d &initialPoint, MatXd&
                     CalVectorAngle(curNormPt, altitudeAngle, azimuthAngle);
                     altitudeIndicator=std::min(NGUtility::Round(altitudeAngle*180.0/M_PI/b+0.5),Phi);//+1;
                     azimuthIndicator=std::min(NGUtility::Round(azimuthAngle*180.0/M_PI/a+0.5),Theta);//+1;//C++ minus 1
-                    ray0 = resultRayLength(azimuthIndicator,altitudeIndicator)*0.5;
-                    ray1 = resultRayLength(azimuthIndicator+1,altitudeIndicator)*0.5;
-                    ray2 = resultRayLength(azimuthIndicator-1,altitudeIndicator)*0.5;
-                    ray3 = resultRayLength(azimuthIndicator,altitudeIndicator+1)*0.5;
-                    ray4 = resultRayLength(azimuthIndicator,altitudeIndicator-1)*0.5;
+					ray0 = resultRayLength(azimuthIndicator, altitudeIndicator)*slice;
+					ray1 = resultRayLength(azimuthIndicator + 1, altitudeIndicator)*slice;
+					ray2 = resultRayLength(azimuthIndicator - 1, altitudeIndicator)*slice;
+					ray3 = resultRayLength(azimuthIndicator, altitudeIndicator + 1)*slice;
+					ray4 = resultRayLength(azimuthIndicator, altitudeIndicator - 1)*slice;
                     rayMean = 0.2 * (ray0 + ray1 + ray2 + ray3 + ray4);
                     if(curPtLength < rayMean + 0.5)
                         innerSomaPts.push_back(Vec3d(i,j,ij) + soma);

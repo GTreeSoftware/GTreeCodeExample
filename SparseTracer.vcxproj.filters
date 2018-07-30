@@ -528,8 +528,6 @@
     <CustomBuild Include="GeneratedFiles\ui_creathdf5dialog.h">
       <Filter>Generated Files</Filter>
     </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <CustomBuild Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>
